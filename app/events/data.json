@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "afrobeats-night-dallas",
+    "title": "Afrobeats Night: Dallas",
+    "date": "Sat, Oct 19 \u2022 9:00 PM \u2014 2:00 AM",
+    "venue": "Dahlia",
+    "city": "Dallas",
+    "image": "https://images.unsplash.com/photo-1520446266423-6f8b12a0f1d6?q=80&w=1600&auto=format&fit=crop",
+    "tag": "Afrobeats",
+    "desc": "All-night Afro vibes with Amapiano blends. VIP tables available."
+  },
+  {
+    "slug": "afrobeats-brunch-denver",
+    "title": "Afrobeats Brunch: Denver",
+    "date": "Sun, Nov 3 \u2022 12:00 PM \u2014 5:00 PM",
+    "venue": "Rooftop",
+    "city": "Denver",
+    "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?q=80&w=1600&auto=format&fit=crop",
+    "tag": "Brunch",
+    "desc": "Daytime energy with bottomless mimosas and sunlit jams."
+  },
+  {
+    "slug": "amapiano-sundays-lusaka",
+    "title": "Amapiano Sundays: Lusaka",
+    "date": "Sun, Nov 24 \u2022 4:00 PM \u2014 10:00 PM",
+    "venue": "Secret Garden",
+    "city": "Lusaka",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600&auto=format&fit=crop",
+    "tag": "Amapiano",
+    "desc": "Deep grooves, log drums, and sunset vibes."
+  }
+]
