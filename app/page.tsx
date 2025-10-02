@@ -1,4 +1,3 @@
-
 'use client';
 import Link from "next/link";
 import events from "./events/data.json";
@@ -7,6 +6,13 @@ import { useEffect, useMemo, useState } from "react";
 export default function Home() {
   const list = (events as any[]);
   const first = list[0];
+
+  // --- Fallback handler for all images ---
+  const onImgError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    img.src = "/fallback.svg";
+    img.onerror = null; // prevent loop
+  };
 
   const tags = ["Afrobeats", "Amapiano", "Afro-fusion"];
   const [tagIndex, setTagIndex] = useState(0);
@@ -72,7 +78,12 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-3">Featured Event</h2>
         <div className="grid md:grid-cols-2 gap-0 card">
           <div className="relative">
-            <img src={(first as any).image} alt={first.title} />
+            <img
+              src={(first as any).image}
+              alt={first.title}
+              loading="lazy"
+              onError={onImgError}
+            />
             <div className="absolute top-2 left-2 badge">{first.tag}</div>
           </div>
           <div className="p-4">
@@ -95,7 +106,13 @@ export default function Home() {
               <div className="relative aspect-video">
                 <div className="card absolute inset-0 [transform-style:preserve-3d] transition-transform duration-500 group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 backface-hidden overflow-hidden rounded-xl">
-                    <img src={(e as any).image} alt={e.title} className="w-full h-full object-cover" />
+                    <img
+                      src={(e as any).image}
+                      alt={e.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      onError={onImgError}
+                    />
                     <div className="absolute top-2 left-2 badge">{e.tag}</div>
                   </div>
                   <div className="absolute inset-0 backface-hidden [transform:rotateY(180deg)] p-4 flex flex-col justify-center items-start gap-1">
